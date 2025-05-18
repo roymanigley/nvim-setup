@@ -21,7 +21,13 @@ RUN apt install -y \
 	sqlite3 \
 	libreadline-dev \
 	unzip \
-	lbzip2
+	lbzip2 \
+	libssl-dev \
+	libsqlite3-dev \
+	libffi-dev \
+	tk-dev \
+	libbz2-dev \
+	libreadline-dev
 
 RUN useradd royman -G sudo -m
 RUN "${USERNAME}:${PASSWORD}" | chpasswd
