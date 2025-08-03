@@ -3,6 +3,8 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
+vim.opt.relativenumber = true
+vim.opt.clipboard = "unnamedplus"
 
 vim.keymap.set("n", "<C-d>", ":q<CR>")
 vim.keymap.set("n", "<C-e>", ":Ex<CR>")
