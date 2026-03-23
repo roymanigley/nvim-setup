@@ -7,12 +7,12 @@ return {
     },
     config = function()
         require("mason").setup()
+
         require("mason-lspconfig").setup({
             ensure_installed = { "pyright" },
         })
 
-        local lspconfig = require("lspconfig")
-        lspconfig.pyright.setup({
+        vim.lsp.config("pyright", {
             on_attach = function(_, bufnr)
                 local opts = { buffer = bufnr }
 
@@ -24,5 +24,7 @@ return {
                 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
             end,
         })
+
+        vim.lsp.enable("pyright")
     end,
 }
